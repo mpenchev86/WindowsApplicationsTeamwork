@@ -27,7 +27,6 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*" />
                     <RowDefinition Height="1*" />
-                    <!--<RowDefinition Height="1*" />-->                    
                 </Grid.RowDefinitions>
                 
                 <Grid.ColumnDefinitions>
@@ -67,36 +66,8 @@
                     </Button>
                 </StackPanel>
 
-
-
-
             </Grid>
-            <!--<ListBox>
-                <ListBox.Items>
-                    <ListBoxItem>
-                        <Grid>
-                            <TextBlock Text="Football" Grid.Row="1" Grid.Column="0"/>
-                            <Image Grid.Row="1" Grid.Column="0" Height="250" Width="250"  Source="http://weknowyourdreams.com/images/football/football-06.jpg" />
-                        </Grid>
-                    </ListBoxItem>
-                </ListBox.Items>
-            </ListBox>
-            <ListBox>
-                <ListBox.Items>
-                    <ListBoxItem>
-                        <Grid>
-                            <TextBlock Text="Basketball" Grid.Row="1" Grid.Column="0"/>
-                            <Image Grid.Row="1" Grid.Column="0" Height="250" Width="250" Source="http://www.jumpstartsports.com/upload/images/Radnor_Basketball/448650-basketball__mario_sports_mix_.png" />
-                        </Grid>
-                    </ListBoxItem>
-                </ListBox.Items>
-            </ListBox>-->
-
-            
-
-
-
-
+ 
         </Grid>
     </Grid>
 </Page>
