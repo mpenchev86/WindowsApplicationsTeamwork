@@ -8,7 +8,7 @@ namespace BeastApplication.ViewModels
 {
     public interface IPageViewModel
     {
-        string Title { get; set; }
+        string Title { get; }
 
         IContentViewModel ContentViewModel { get; set; }
     }

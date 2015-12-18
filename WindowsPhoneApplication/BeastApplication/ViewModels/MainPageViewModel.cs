@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace BeastApplication.ViewModels
 {
-    class MainPageViewModel : IPageViewModel
+    class MainPageViewModel : ViewModelBase, IPageViewModel
     {
-        public IContentViewModel ContentViewModel { get; set; }
+        public string Title
+        {
+            get
+            {
+                return "Our App Title";
+            }
+        }
 
-        public string Title { get; set; }
+        public IContentViewModel ContentViewModel { get; set; }
     }
 }

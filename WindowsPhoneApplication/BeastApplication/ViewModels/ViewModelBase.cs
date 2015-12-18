@@ -7,11 +7,11 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    class ViewModelBase : INotifyPropertyChanged
+    public class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected void OnPropertyChange(string propertyName)
+        protected void RaisePropertyChange(string propertyName)
         {
             if (this.PropertyChanged != null)
             {
