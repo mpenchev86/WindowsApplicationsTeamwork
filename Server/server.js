@@ -15,14 +15,13 @@ var port = 1234;
 var app = express();
 app.use(cookieParser());
 app.use(bodyParser.json());
-app.use(session());
+app.use(session({secret: 'magic unicorns'}));
 
 app.use(passport.initialize());
-app.use(passport.session({secret: 'magic unicorns'}));
-app.use(function(req, res, next){
-    res.send(req.user);
-    next();
-});
+//app.use(function(req, res, next){
+//    console.log(req.user);
+//    next();
+//});
 
 mongoose.connect('mongodb://localhost/sportsevents');
 var db = mongoose.connection;
@@ -42,8 +41,8 @@ db.on('error', function(err){
 
 var userSchema = mongoose.Schema({
     username: String,
-    firstName: String, //
-    lastName: String, //
+    firstName: String,
+    lastName: String,
     salt: String,
     hashPass: String
 });
