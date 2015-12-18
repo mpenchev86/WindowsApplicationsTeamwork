@@ -106,6 +106,7 @@
     <Compile Include="ViewModels\IContentViewModel.cs" />
     <Compile Include="ViewModels\IPageViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\SportTypeViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup>

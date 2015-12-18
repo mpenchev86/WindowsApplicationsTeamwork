@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace BeastApplication.ViewModels
 {
-    class SportType
+    public class SportTypeViewModel
     {
+        public string Name { get; set; }
+
+        public string ImagePath { get; set; }
     }
 }
