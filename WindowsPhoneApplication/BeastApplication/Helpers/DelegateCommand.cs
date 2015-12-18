@@ -7,12 +7,12 @@ using System.Windows.Input;
 
 namespace BeastApplication.Helpers
 {
-    public class DelegateCommand : ICommand
+    public class DelegateCommand<T> : ICommand
     {
-        private Func<bool> canExecute;
-        private Action execute;
+        private Func<T, bool> canExecute;
+        private Action<T> execute;
 
-        public DelegateCommand(Action execute, Func<bool> canExecute = null)
+        public DelegateCommand(Action<T> execute, Func<T, bool> canExecute = null)
         {
             this.execute = execute;
             this.canExecute = canExecute;
@@ -26,12 +26,12 @@ namespace BeastApplication.Helpers
             {
                 return true;
             }
-            return this.canExecute();
+            return this.canExecute((T)parameter);
         }
 
         public void Execute(object parameter)
         {
-            this.execute();
+            this.execute((T)parameter);
         }
     }
 }
