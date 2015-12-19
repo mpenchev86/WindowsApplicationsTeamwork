@@ -1,7 +1,5 @@
 var express = require('express');
 
-
-
 require('./server/config/express');
 require('./server/config/mongoose');
 require('./server/config/passport');

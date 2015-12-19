@@ -9,7 +9,15 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <Grid Name="gridTitle"
+              Background="Blue"
+              Grid.Row="0">
+           
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="6*"/>
@@ -30,7 +38,11 @@
                     Grid.Column="2"/>
             <!--<TextBlock Name="tbDate"
                    Style="{StaticResource TitleStyle}"/>-->
-        </Grid>        
+        </Grid>
+        
+        <Grid>
+            
+        </Grid>
     </Grid>
 
     <Page.BottomAppBar>

@@ -38,32 +38,32 @@
                 <StackPanel Grid.Row="0" Grid.Column= "0" >
                     <TextBlock Text="Football" FontSize="30"
                                HorizontalAlignment="Center"/>
-                    <Button  Background="Transparent" >
-                        <Image  Source="http://weknowyourdreams.com/images/football/football-06.jpg" />
+                    <Button HorizontalAlignment="Center" Background="Transparent" >
+                        <Image VerticalAlignment="Top" Height="200" Source="http://weknowyourdreams.com/images/football/football-06.jpg" />
                     </Button>
                 </StackPanel>
 
                 <StackPanel Grid.Row="0" Grid.Column= "1">
                     <TextBlock Text="Basketball" FontSize="30"
                                HorizontalAlignment="Center"/>
-                    <Button Background="Transparent" >
-                        <Image Source="http://www.jumpstartsports.com/upload/images/Radnor_Basketball/448650-basketball__mario_sports_mix_.png" />
+                    <Button HorizontalAlignment="Center" Background="Transparent" >
+                        <Image VerticalAlignment="Top" Height="200" Source="http://www.jumpstartsports.com/upload/images/Radnor_Basketball/448650-basketball__mario_sports_mix_.png" />
                     </Button>
                 </StackPanel>
-                
+
                 <StackPanel Grid.Row="1" Grid.Column= "0">
                     <TextBlock Text="Volleyball" FontSize="30"
                                HorizontalAlignment="Center"/>
-                    <Button Background="Transparent" >
-                        <Image  Source="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ3CraG3oZonu4PKjedU-PbSy9WQefot0hNa0B2rGxOkTZatYNU" />
+                    <Button HorizontalAlignment="Center" Background="Transparent">
+                        <Image VerticalAlignment="Top" Height="200" Source="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ3CraG3oZonu4PKjedU-PbSy9WQefot0hNa0B2rGxOkTZatYNU" />
                     </Button>
                 </StackPanel>
                 
                 <StackPanel Grid.Row="1" Grid.Column= "1">
                     <TextBlock Text="Handball" FontSize="30"
                                HorizontalAlignment="Center"/>
-                    <Button  Background="Transparent">
-                        <Image  Source="http://handballcab.com.ar/css/images/logoHandball.png" />
+                    <Button HorizontalAlignment="Center" Background="Transparent">
+                        <Image VerticalAlignment="Top" Height="200" Source="http://handballcab.com.ar/css/images/logoHandball.png" />
                     </Button>
                 </StackPanel>
 
