@@ -121,6 +121,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\DataPersister.cs" />
+    <Compile Include="ViewModels\PlayersViewModel.cs" />
     <Compile Include="ViewModels\SportEventPageViewModel.cs" />
     <Compile Include="ViewModels\SportEventViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />

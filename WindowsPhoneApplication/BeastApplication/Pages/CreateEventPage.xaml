@@ -9,8 +9,38 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Style="{StaticResource TitleStyle}"
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <Grid Name="gridTitle"
+              Background="Blue"
+              Grid.Row="0">
+            <TextBlock Style="{StaticResource TitleStyle}"
                    Text="Create Event"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <StackPanel>
+                <Line Height="20" />
+                <TextBlock HorizontalAlignment="Center" Width="250" FontSize="20" Text="Insert time in format" />
+                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Hour:Minutes AM/PM" />
+                <Line Height="20" />
+                <TextBlock HorizontalAlignment="Center" Width="250" FontSize="20"  Text="Insert sport event duratuion" />
+                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Duration"/>
+                <Line Height="20" />
+                <TextBlock HorizontalAlignment="Center" Width="250" FontSize="20"  Text="Insert numbers of people" />
+                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Number" />
+                <Line Height="20" />
+                <TextBlock HorizontalAlignment="Center" Width="250" FontSize="20"  Text="Insert your name" />
+                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Your name" />
+                <Line Height="20" />
+                <Button Background="Green" HorizontalAlignment="Center" Width="250" >Add event</Button>
+            </StackPanel>
+            
+        </Grid>
+        
     </Grid>
     <Page.BottomAppBar>
         <AppBar>

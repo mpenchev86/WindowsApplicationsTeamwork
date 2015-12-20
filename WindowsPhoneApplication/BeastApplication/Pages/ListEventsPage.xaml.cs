@@ -30,7 +30,7 @@ namespace BeastApplication.Pages
             this.ViewModel = new SportEventPageViewModel();
             this.ViewModel.SportEvents = new List<SportEventViewModel>
             {
-                new SportEventViewModel(1, "8:00 PM", "Reni")
+                new SportEventViewModel("8:00 PM", 12, 2, "Reni")
             };
 
             this.navigationView.NavItems = new[]

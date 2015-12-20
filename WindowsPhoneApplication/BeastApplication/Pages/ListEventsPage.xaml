@@ -25,7 +25,7 @@
             <StackPanel Name="panelAdd" >
 
             </StackPanel>
-
+            
             <StackPanel Name="panelList">
                 <ListBox ItemsSource="{Binding SportEvents}">
                     <ListBox.ItemTemplate>
@@ -34,7 +34,7 @@
 
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="Players: " FontWeight="Bold"></TextBlock>
-                                    <TextBlock Text="{Binding PeopleCount}"/>
+                                    <TextBlock Text="{Binding ActualPeopleCount}"/>
                                 </StackPanel>
 
                                 <StackPanel Orientation="Horizontal">
@@ -52,8 +52,10 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
+                <Line Height="20"/>
+                <Button Background="Green"  HorizontalAlignment="Center" Width="300">Create Event</Button>
             </StackPanel>
-            <Button Background="Green" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="300">Add Event</Button>
+            
         </Grid>
         
     </Grid>
