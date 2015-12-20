@@ -58,8 +58,8 @@
 
         <Grid Grid.Row="2">
             <ComboBox Width="200">
-                <x:String>NSA</x:String>
-                <x:String>Academic</x:String>
+                <ComboBoxItem>NSA</ComboBoxItem>
+                <ComboBoxItem>Academic</ComboBoxItem>
             </ComboBox>
         </Grid>
     </Grid>
