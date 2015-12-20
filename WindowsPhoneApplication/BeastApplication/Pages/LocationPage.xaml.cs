@@ -70,25 +70,9 @@ namespace BeastApplication.Pages
             var geoposition = await geolocator.GetGeopositionAsync();
         }
 
-        protected /*async*/ override void OnNavigatedTo(NavigationEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-        }
-
-        private void OnGoBackButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (this.Frame.CanGoBack)
-            {
-                this.Frame.GoBack();
-            }
-        }
-
-        private void OnGoForwardButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (this.Frame.CanGoForward)
-            {
-                this.Frame.GoForward();
-            }
         }
     }
 }

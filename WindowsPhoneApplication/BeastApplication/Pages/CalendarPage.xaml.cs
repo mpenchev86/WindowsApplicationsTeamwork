@@ -44,7 +44,7 @@ namespace BeastApplication.Pages
 
         private void CalendarView_SelectedDatesChanged(CalendarView sender, CalendarViewSelectedDatesChangedEventArgs args)
         {
-
+            this.Frame.Navigate(typeof(ListEventsPage), this.calendarView.SelectedDates.FirstOrDefault().DateTime.ToString());
         }
     }
 }

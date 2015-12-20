@@ -36,7 +36,7 @@
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(LocationsPage), DateTime.Now);
+            this.Frame.Navigate(typeof(LocationsPage));
         }
     }
 }

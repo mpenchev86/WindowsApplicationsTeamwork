@@ -58,6 +58,12 @@ namespace BeastApplication.Pages
             }
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            var parameter = (e.Parameter as string).Split(' ')[0];
+            this.datePicked.Text = "Schedule for " + parameter;
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             (Window.Current.Content as Frame)

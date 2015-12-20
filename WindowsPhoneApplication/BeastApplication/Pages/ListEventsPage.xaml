@@ -10,15 +10,21 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="60" />
+            <RowDefinition Height="85" />
             <RowDefinition Height="1*" />
+            <RowDefinition Height="30" />
         </Grid.RowDefinitions>
 
         <Grid Name="gridTitle"
               Background="Blue"
               Grid.Row="0">
-            <TextBlock Text="Events"
+            <StackPanel>
+                <TextBlock Text="Events"
                        Style="{StaticResource TitleStyle}" />
+                <TextBlock Name="datePicked"
+                       HorizontalAlignment="Center"
+                           FontSize="24"/>
+            </StackPanel>
         </Grid>
 
         <Grid Grid.Row="1">
@@ -61,7 +67,9 @@
             </StackPanel>
             
         </Grid>
+
         
+
     </Grid>
     <Page.BottomAppBar>
         <AppBar>
