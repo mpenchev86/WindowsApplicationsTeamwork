@@ -1,11 +1,14 @@
 ﻿using BeastApplication.Controls;
+using BeastApplication.Helpers;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -14,6 +17,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Controls.Maps;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -24,9 +28,15 @@ namespace BeastApplication.Pages
     /// </summary>
     public sealed partial class LocationsPage : Page
     {
+        private Geolocator geolocator;
+
         public LocationsPage()
         {
             this.InitializeComponent();
+            this.geolocator = new Geolocator();
+            this.InitGeolocation();
+            this.geolocator.PositionChanged += OnGeolocationPositionChanged;
+
             this.navigationView.NavItems = new[]
             {
                 new AppBarButtonContent()
@@ -37,15 +47,33 @@ namespace BeastApplication.Pages
                 new AppBarButtonContent()
                 {
                     Title = "Next",
-                    DestinationPageType = typeof(ListEventsPage)
+                    DestinationPageType = typeof(CalendarPage)
                 }
             };
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        private void OnGeolocationPositionChanged(Geolocator sender, PositionChangedEventArgs args)
+        {
+            var lat = args.Position.Coordinate.Latitude;
+            var lon = args.Position.Coordinate.Longitude;
+            Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                this.tbLat.Text = string.Format("Latitude: {0}", lat);
+                this.tbLon.Text = string.Format("Longitude: {0}", lon);
+            });
+            
+        }
+
+        private async void InitGeolocation()
+        {
+            var accessStatus = await Geolocator.RequestAccessAsync();
+            var geoposition = await geolocator.GetGeopositionAsync();
+        }
+
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            //this.tbDate.Text = e.Parameter.ToString();
+            //this.tbDate.Text = e.Parameter.ToString();        
         }
 
         private void OnGoBackButton_Click(object sender, RoutedEventArgs e)

@@ -6,18 +6,21 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:BeastApplication.Controls"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
         <Grid.RowDefinitions>
             <RowDefinition Height="60" />
+            <RowDefinition Height="3*" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
 
         <Grid Name="gridTitle"
               Background="Blue"
               Grid.Row="0">
-           
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="6*"/>
@@ -39,9 +42,27 @@
             <!--<TextBlock Name="tbDate"
                    Style="{StaticResource TitleStyle}"/>-->
         </Grid>
-        
-        <Grid>
-            
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0">
+                <TextBlock Name="tbLat" />
+                <TextBlock Name="tbLon" />
+                
+            </StackPanel>
+
+            <Maps:MapControl Grid.Row="1" Name="MyMap"></Maps:MapControl>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <ComboBox Width="200">
+                <x:String>NSA</x:String>
+                <x:String>Academic</x:String>
+            </ComboBox>
         </Grid>
     </Grid>
 

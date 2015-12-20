@@ -1,5 +1,7 @@
-﻿using System;
+﻿using BeastApplication.Controls;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,6 +27,24 @@ namespace BeastApplication.Pages
         public CalendarPage()
         {
             this.InitializeComponent();
+            this.navigationView.NavItems = new[]
+           {
+                new AppBarButtonContent()
+                {
+                    Title = "Home",
+                    DestinationPageType = typeof(MainPage)
+                },
+                new AppBarButtonContent()
+                {
+                    Title = "Next",
+                    DestinationPageType = typeof(ListEventsPage)
+                }
+            };
+        }
+
+        private void CalendarView_SelectedDatesChanged(CalendarView sender, CalendarViewSelectedDatesChangedEventArgs args)
+        {
+
         }
     }
 }

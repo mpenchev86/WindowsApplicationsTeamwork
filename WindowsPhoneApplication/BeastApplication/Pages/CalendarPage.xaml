@@ -5,9 +5,16 @@
     xmlns:local="using:BeastApplication.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:BeastApplication.Controls"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <CalendarView HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectedDatesChanged="CalendarView_SelectedDatesChanged"></CalendarView>
 
     </Grid>
+    <Page.BottomAppBar>
+        <AppBar>
+            <controls:NavigationView x:Name="navigationView"/>
+        </AppBar>
+    </Page.BottomAppBar>
 </Page>

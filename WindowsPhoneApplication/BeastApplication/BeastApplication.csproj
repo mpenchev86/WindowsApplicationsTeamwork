@@ -113,8 +113,8 @@
     <Compile Include="Pages\ListEventsPage.xaml.cs">
       <DependentUpon>ListEventsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\LocationsPage.xaml.cs">
-      <DependentUpon>LocationsPage.xaml</DependentUpon>
+    <Compile Include="Pages\LocationPage.xaml.cs">
+      <DependentUpon>LocationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -166,9 +166,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\LocationsPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Pages\LocationPage.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
