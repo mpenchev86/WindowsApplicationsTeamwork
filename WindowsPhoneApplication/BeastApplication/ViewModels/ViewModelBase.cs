@@ -15,8 +15,10 @@
         {
             if (this.PropertyChanged != null)
             {
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                return;
             }
+
+            this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

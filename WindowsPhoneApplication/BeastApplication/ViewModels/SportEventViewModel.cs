@@ -1,19 +1,25 @@
-﻿using System;
+﻿using BeastApplication.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace BeastApplication.ViewModels
 {
-    public class SportEventViewModel
+    public class SportEventViewModel : ViewModelBase
     {
         private ObservableCollection<PlayersViewModel> players;
-        public SportEventViewModel()
-            :this(string.Empty, 0, 0, string.Empty)
-        {
+        private ICommand joinCommand;
+        private int actualPeopleCount;
 
+        public SportEventViewModel()
+            : this(string.Empty, 0, 0, string.Empty)
+        {
+            this.players = new ObservableCollection<PlayersViewModel>();
+            this.NewPlayer = new PlayersViewModel();
         }
 
         public SportEventViewModel(string playAt, int duration, int expectedPeopleCount, string creatorName)
@@ -22,13 +28,20 @@ namespace BeastApplication.ViewModels
             this.Duration = duration;
             this.ExpectedPeopleCount = expectedPeopleCount;
             this.CreatorName = creatorName;
+            this.players = new ObservableCollection<PlayersViewModel>();
+            this.NewPlayer = new PlayersViewModel();
         }
 
-        public int ActualPeopleCount
+        public int ActualPeopleCount //{ get; set; }
         {
             get
             {
-                return this.players.Count;
+                return this.actualPeopleCount;
+            }
+            set
+            {
+                this.actualPeopleCount = value;
+                this.RaisePropertyChange("ActualPeopleCount");
             }
         }
 
@@ -40,34 +53,25 @@ namespace BeastApplication.ViewModels
 
         public string CreatorName { get; set; }
 
+        public PlayersViewModel NewPlayer { get; set; }
 
-        public IEnumerable<PlayersViewModel> Players
+        public ICommand Join
         {
             get
             {
-                if (this.players == null)
+                if (this.joinCommand == null)
                 {
-                    this.players = new ObservableCollection<PlayersViewModel>();
+                    this.joinCommand = new DelegateCommand(this.HandleJoinCommand);
                 }
 
-                return this.players;
-            }
-
-            set
-            {
-                if (this.players == null)
-                {
-                    this.players = new ObservableCollection<PlayersViewModel>();
-                }
-
-                this.players.Clear();
-                foreach (var item in value)
-                {
-                    this.players.Add(item);
-                }
+                return this.joinCommand;
             }
         }
 
-       
+        private void HandleJoinCommand()
+        {
+            this.players.Add(new PlayersViewModel(this.NewPlayer.Name));
+            this.ActualPeopleCount = this.players.Count;
+        }
     }
 }
