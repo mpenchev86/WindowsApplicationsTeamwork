@@ -37,13 +37,13 @@ namespace BeastApplication.Pages
             {
                 new AppBarButtonContent()
                 {
-                    Title = "Home",
-                    DestinationPageType = typeof(MainPage)
+                    Title = "Back",
+                    DestinationPageType = typeof(CalendarPage)
                 },
                 new AppBarButtonContent()
                 {
                     Title = "Next",
-                    DestinationPageType = typeof(ListEventsPage)
+                    DestinationPageType = typeof(CreateEventPage)
                 }
             };
         }

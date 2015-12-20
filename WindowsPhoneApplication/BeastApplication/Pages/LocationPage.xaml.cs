@@ -41,7 +41,7 @@ namespace BeastApplication.Pages
             {
                 new AppBarButtonContent()
                 {
-                    Title = "Home",
+                    Title = "Back",
                     DestinationPageType = typeof(MainPage)
                 },
                 new AppBarButtonContent()
@@ -52,11 +52,11 @@ namespace BeastApplication.Pages
             };
         }
 
-        private void OnGeolocationPositionChanged(Geolocator sender, PositionChangedEventArgs args)
+        private async void OnGeolocationPositionChanged(Geolocator sender, PositionChangedEventArgs args)
         {
-            var lat = args.Position.Coordinate.Latitude;
-            var lon = args.Position.Coordinate.Longitude;
-            Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            var lat = args.Position.Coordinate.Point.Position.Latitude;
+            var lon = args.Position.Coordinate.Point.Position.Longitude;
+            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
                 this.tbLat.Text = string.Format("Latitude: {0}", lat);
                 this.tbLon.Text = string.Format("Longitude: {0}", lon);
@@ -70,10 +70,9 @@ namespace BeastApplication.Pages
             var geoposition = await geolocator.GetGeopositionAsync();
         }
 
-        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        protected /*async*/ override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            //this.tbDate.Text = e.Parameter.ToString();        
         }
 
         private void OnGoBackButton_Click(object sender, RoutedEventArgs e)

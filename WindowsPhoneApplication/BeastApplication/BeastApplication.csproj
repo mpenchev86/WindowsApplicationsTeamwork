@@ -123,8 +123,6 @@
     <Compile Include="ViewModels\DataPersister.cs" />
     <Compile Include="ViewModels\SportEventPageViewModel.cs" />
     <Compile Include="ViewModels\SportEventViewModel.cs" />
-    <Compile Include="ViewModels\IContentViewModel.cs" />
-    <Compile Include="ViewModels\IPageViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\SportTypeViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />

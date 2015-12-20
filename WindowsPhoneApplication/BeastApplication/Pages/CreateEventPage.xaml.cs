@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeastApplication.Controls;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,15 @@ namespace BeastApplication.Pages
         public CreateEventPage()
         {
             this.InitializeComponent();
+
+            this.navigationView.NavItems = new[]
+            {
+                new AppBarButtonContent()
+                {
+                    Title = "Back",
+                    DestinationPageType = typeof(ListEventsPage)
+                }
+            };
         }
     }
 }

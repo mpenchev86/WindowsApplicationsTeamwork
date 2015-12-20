@@ -31,8 +31,8 @@ namespace BeastApplication.Pages
            {
                 new AppBarButtonContent()
                 {
-                    Title = "Home",
-                    DestinationPageType = typeof(MainPage)
+                    Title = "Back",
+                    DestinationPageType = typeof(LocationsPage)
                 },
                 new AppBarButtonContent()
                 {

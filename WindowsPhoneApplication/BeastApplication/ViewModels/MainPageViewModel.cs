@@ -6,7 +6,7 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    class MainPageViewModel : ViewModelBase, IPageViewModel
+    class MainPageViewModel : ViewModelBase
     {
         public string Title
         {
@@ -15,7 +15,5 @@
                 return "Our App Title";
             }
         }
-
-        public IContentViewModel ContentViewModel { get; set; }
     }
 }

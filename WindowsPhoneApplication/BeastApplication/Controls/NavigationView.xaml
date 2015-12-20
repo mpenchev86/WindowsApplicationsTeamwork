@@ -10,13 +10,18 @@
     d:DesignWidth="400">
 
     <Grid>
-        <ListBox Name="navViewListBox">
-            <ListBox.ItemTemplate>
+        <ItemsControl Name="navViewListBox" ScrollViewer.HorizontalScrollMode="Enabled">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Button Content="{Binding Title}"
+                    <AppBarButton Content="{Binding Title}"
                             Click="Button_Click_1"/>
                 </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </Grid>
 </UserControl>

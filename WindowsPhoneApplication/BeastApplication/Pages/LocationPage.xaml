@@ -39,8 +39,6 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top"
                     Grid.Column="2"/>
-            <!--<TextBlock Name="tbDate"
-                   Style="{StaticResource TitleStyle}"/>-->
         </Grid>
 
         <Grid Grid.Row="1">
