@@ -53,7 +53,10 @@
                     </ListBox.ItemTemplate>
                 </ListBox>
                 <Line Height="20"/>
-                <Button Background="Green"  HorizontalAlignment="Center" Width="300">Create Event</Button>
+                <Button Background="Green"  
+                        HorizontalAlignment="Center" 
+                        Width="300"
+                        Click="Button_Click">Create Event</Button>
             </StackPanel>
             
         </Grid>

@@ -59,5 +59,11 @@ namespace BeastApplication.Pages
                 this.DataContext = value;
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            (Window.Current.Content as Frame)
+                 .Navigate(typeof(CreateEventPage));
+        }
     }
 }
