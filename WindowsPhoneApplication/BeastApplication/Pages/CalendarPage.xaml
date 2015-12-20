@@ -9,7 +9,12 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <CalendarView HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectedDatesChanged="CalendarView_SelectedDatesChanged"></CalendarView>
+        <CalendarView Name="calendarView"
+                      HorizontalAlignment="Stretch" 
+                      VerticalAlignment="Stretch" 
+                      SelectedDatesChanged="CalendarView_SelectedDatesChanged"
+                      SelectionMode="Single">
+        </CalendarView>
 
     </Grid>
     <Page.BottomAppBar>

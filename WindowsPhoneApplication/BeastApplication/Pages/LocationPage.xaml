@@ -21,24 +21,9 @@
               Background="Blue"
               Grid.Row="0">
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="6*"/>
-                <ColumnDefinition Width="2*"/>
-            </Grid.ColumnDefinitions>
             <TextBlock Text="Locations"
                        Style="{StaticResource TitleStyle}"
                        Grid.Column="1"/>
-            <Button Content="Back"
-                    Click="OnGoBackButton_Click"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
-                    Grid.Column="0"/>
-            <Button Content="Forward"
-                    Click="OnGoForwardButton_Click"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Top"
-                    Grid.Column="2"/>
         </Grid>
 
         <Grid Grid.Row="1">
