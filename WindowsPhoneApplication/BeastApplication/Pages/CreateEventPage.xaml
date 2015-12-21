@@ -15,10 +15,12 @@
         </Grid.RowDefinitions>
 
         <Grid Name="gridTitle"
-              Background="Blue"
+              Background="CadetBlue"
               Grid.Row="0">
             <TextBlock Style="{StaticResource TitleStyle}"
-                   Text="Create Event"/>
+                   Text="Create Event"
+                       Foreground="AliceBlue"
+                       />
         </Grid>
 
         <Grid Grid.Row="1">

@@ -102,6 +102,10 @@
     <Compile Include="Controls\NavigationView.xaml.cs">
       <DependentUpon>NavigationView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\SportButtonContent.cs" />
+    <Compile Include="Controls\SportButtonView.xaml.cs">
+      <DependentUpon>SportButtonView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Helpers\BoolToColorValueConverter.cs" />
     <Compile Include="Helpers\DelegateCommand.cs" />
@@ -127,6 +131,7 @@
     <Compile Include="ViewModels\SportEventViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\SportTypeViewModel.cs" />
+    <Compile Include="ViewModels\UserSelection.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +158,10 @@
     <Page Include="Controls\NavigationView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\SportButtonView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\CalendarPage.xaml">
       <SubType>Designer</SubType>
