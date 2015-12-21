@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Threading.Tasks;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -35,6 +36,13 @@ namespace BeastApplication.Pages
                     DestinationPageType = typeof(ListEventsPage)
                 }
             };
+        }
+
+        private async void OnChangeProgressStateButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.TheProgressRing.IsActive = true;
+            await Task.Delay(5000);
+            this.TheProgressRing.IsActive = false;
         }
     }
 }

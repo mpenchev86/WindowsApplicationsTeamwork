@@ -43,8 +43,8 @@
                             <StackPanel>
 
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="Players: " FontWeight="Bold"></TextBlock>
-                                    <TextBlock Text="{Binding ActualPeopleCount}"/>
+                                    <TextBlock  Text="Players: " FontWeight="Bold"></TextBlock>
+                                    <TextBlock Text="{Binding ActualPeopleCount, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                                 </StackPanel>
 
                                 <StackPanel Orientation="Horizontal">
@@ -57,7 +57,8 @@
                                     <TextBlock Text="{Binding CreatorName}" />
                                 </StackPanel>
 
-                                <Button Content="Join" Width="100" Background="Green"/>
+                                <!--<Button Content="Join" Width="100" Background="Green" Command="{Binding Join}"/>-->
+                                <Button Content="Join" Width="100" Background="Green" Click="OnButtonJoinClick" />
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>

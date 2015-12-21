@@ -38,8 +38,11 @@
                 <TextBlock HorizontalAlignment="Center" Width="250" FontSize="20"  Text="Insert your name" />
                 <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Your name" />
                 <Line Height="20" />
-                <Button Background="Green" HorizontalAlignment="Center" Width="250" >Add event</Button>
+                <Button Background="Green" HorizontalAlignment="Center" Width="250" 
+                        Command="{Binding Save}" 
+                        Click="OnChangeProgressStateButtonClick" >Add event</Button>
             </StackPanel>
+            <ProgressRing Name="TheProgressRing" Width="150" Height="150" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             
         </Grid>
         

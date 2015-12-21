@@ -7,12 +7,17 @@
     using System.Threading.Tasks;
     using System.Windows.Input;
 
-    public class DelegateCommand<T> : ICommand
+    public class DelegateCommand : ICommand
     {
-        private Func<T, bool> canExecute;
-        private Action<T> execute;
+        private Func<bool> canExecute;
+        private Action execute;
 
-        public DelegateCommand(Action<T> execute, Func<T, bool> canExecute = null)
+        public DelegateCommand(Action execute)
+            :this(execute, null)
+        {
+
+        }
+        public DelegateCommand(Action execute, Func<bool> canExecute)
         {
             this.execute = execute;
             this.canExecute = canExecute;
@@ -26,12 +31,12 @@
             {
                 return true;
             }
-            return this.canExecute((T)parameter);
+            return this.canExecute();
         }
 
         public void Execute(object parameter)
         {
-            this.execute((T)parameter);
+            this.execute();
         }
     }
 }

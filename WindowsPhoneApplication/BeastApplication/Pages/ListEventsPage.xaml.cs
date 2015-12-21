@@ -19,9 +19,6 @@ using Windows.UI.Xaml.Navigation;
 
 namespace BeastApplication.Pages
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class ListEventsPage : Page
     {
         public ListEventsPage()
@@ -30,7 +27,8 @@ namespace BeastApplication.Pages
             this.ViewModel = new SportEventPageViewModel();
             this.ViewModel.SportEvents = new List<SportEventViewModel>
             {
-                new SportEventViewModel("8:00 PM", 12, 2, "Reni")
+                new SportEventViewModel("8:00 PM", 12, 2, "Reni"),
+                new SportEventViewModel("6:00 PM", 22, 3, "Reniiii")
             };
 
             this.navigationView.NavItems = new[]
@@ -75,6 +73,12 @@ namespace BeastApplication.Pages
         {
             (Window.Current.Content as Frame)
                  .Navigate(typeof(CreateEventPage));
+        }
+
+        private void OnButtonJoinClick(object sender, RoutedEventArgs e)
+        {          
+            var dataContext = ((Button) sender).DataContext as SportEventViewModel;
+            dataContext.ActualPeopleCount += 1;
         }
     }
 }
