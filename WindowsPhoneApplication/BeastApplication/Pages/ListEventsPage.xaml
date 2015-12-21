@@ -33,57 +33,66 @@
                            />
             </StackPanel>
 
-
             <StackPanel Name="panelAdd" Grid.Row="1" >
                 <!--<TextBlock HorizontalAlignment="Center" Width="250" FontSize="20" Text="Insert time in format" />-->
-                <TextBox HorizontalAlignment="Left" Width="250" PlaceholderText="Hour:Minutes AM/PM" 
-                         Text="{Binding NewSportEvent.PlayAt, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox HorizontalAlignment="Left" 
+                         Width="250" 
+                         PlaceholderText="Hour:Minutes AM/PM" 
+                         Text="{Binding NewSportEvent.PlayAt, Mode=TwoWay}"/>
 
                 <!--<TextBlock HorizontalAlignment="Center" Width="250" FontSize="20"  Text="Insert sport event duratuion" />-->
-                <TextBox HorizontalAlignment="Left" Width="250" PlaceholderText="Duration" 
-                         Text="{Binding NewSportEvent.Duration, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox HorizontalAlignment="Left" 
+                         Width="250" 
+                         PlaceholderText="Duration" 
+                         Text="{Binding NewSportEvent.Duration, Mode=TwoWay}"/>
 
                 <!--<TextBlock HorizontalAlignment="Center" Width="250" FontSize="20"  Text="Insert numbers of people" />-->
-                <TextBox HorizontalAlignment="Left" Width="250" PlaceholderText="Number" 
-                         Text="{Binding NewSportEvent.ExpectedPeopleCount, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox HorizontalAlignment="Left" 
+                         Width="250" PlaceholderText="Number" 
+                         Text="{Binding NewSportEvent.ExpectedPeopleCount, Mode=TwoWay}"/>
 
                 <!--<TextBlock HorizontalAlignment="Center" Width="250" FontSize="20"  Text="Insert your name" />-->
-                <TextBox HorizontalAlignment="Left" Width="250" PlaceholderText="Your name" 
-                         Text="{Binding NewSportEvent.CreatorName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox HorizontalAlignment="Left" 
+                         Width="250" 
+                         PlaceholderText="Your name" 
+                         Text="{Binding NewSportEvent.CreatorName, Mode=TwoWay}"/>
 
-                <Button Background="Green" HorizontalAlignment="Left" Width="250" 
+            <Button Background="Green" HorizontalAlignment="Left" 
+                        Width="250" 
                         Click="OnAddEventButtonClick"
                         Command="{Binding Save}" >Add event</Button>
-
-            
-
         </StackPanel>
         
-        <ProgressRing Name="TheProgressRing" Width="150" Height="150" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+        <ProgressRing Name="TheProgressRing" 
+                      Width="150" Height="150" 
+                      HorizontalAlignment="Center"/>
         
         <ScrollViewer Name="panelList" Grid.Row="2">
             <ListBox ItemsSource="{Binding SportEvents}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
-
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock  Text="Players: " FontWeight="Bold"></TextBlock>
+                                <TextBlock  Text="Players: "
+                                            FontWeight="Bold"></TextBlock>
                                 <TextBlock Text="{Binding ActualPeopleCount}"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Play at: " TextTrimming="None" FontWeight="Bold"></TextBlock>
+                                <TextBlock Text="Play at: " 
+                                           FontWeight="Bold"/>
                                 <TextBlock Text="{Binding PlayAt}"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Duration: " TextTrimming="None" FontWeight="Bold"></TextBlock>
+                                <TextBlock Text="Duration: " 
+                                           FontWeight="Bold" />
                                 <TextBlock Text="{Binding Duration}"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Creator: " FontWeight="Bold"></TextBlock>
+                                <TextBlock Text="Creator: " 
+                                           FontWeight="Bold" />
                                 <TextBlock Text="{Binding CreatorName}" />
                             </StackPanel>
 
@@ -104,10 +113,6 @@
  
     </Grid>
         
-
-        
-
-
     <Page.BottomAppBar>
         <AppBar>
             <controls:NavigationView x:Name="navigationView"/>
