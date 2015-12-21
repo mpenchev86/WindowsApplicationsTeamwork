@@ -12,19 +12,24 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="60" />
+            <RowDefinition Height="85" />
             <RowDefinition Height="3*" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
 
-        <Grid Name="gridTitle"
-              Background="Blue"
+        <StackPanel Name="gridTitle"
+              Background="CadetBlue"
               Grid.Row="0">
 
             <TextBlock Text="Locations"
                        Style="{StaticResource TitleStyle}"
+                       Foreground="AliceBlue"
                        Grid.Column="1"/>
-        </Grid>
+            <TextBlock x:Name="sportType"
+                       FontSize="24"
+                       Foreground="AliceBlue"
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
 
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>

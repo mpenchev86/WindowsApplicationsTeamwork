@@ -15,17 +15,26 @@
         </Grid.RowDefinitions>
 
         <Grid Name="gridTitle"
-              Background="Blue"
+              Background="CadetBlue"
               Grid.Row="0">
             <TextBlock Text="Select sport"
-                       Style="{StaticResource TitleStyle}" />
+                       Style="{StaticResource TitleStyle}"
+                       Foreground="AliceBlue"
+                       />
 
         </Grid>
+
+        <!--<GridView Name="gridSelect"
+                  Grid.Row="1"
+                  FlowDirection="LeftToRight"
+                  Grid.ColumnSpan="300">
+            <GridView.Items>-->
         
-        <Grid Name="gridSelect"
-              Grid.Row="1">
-            <Grid>
-                <Grid.RowDefinitions>
+                <controls:SportButtonView x:Name="sportViewGrid"
+                                          Grid.Row="1"/>
+            <!--</GridView.Items>-->
+            <!--<GridView>-->
+                <!--<Grid.RowDefinitions>
                     <RowDefinition Height="1*" />
                     <RowDefinition Height="1*" />
                 </Grid.RowDefinitions>
@@ -33,9 +42,9 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="1*" />
-                </Grid.ColumnDefinitions>
+                </Grid.ColumnDefinitions>-->
 
-                <StackPanel Grid.Row="0" Grid.Column= "0" >
+                <!--<StackPanel Grid.Row="0" Grid.Column= "0" >
                     <TextBlock Text="Football" FontSize="30"
                                HorizontalAlignment="Center"/>
                     <Button Style="{StaticResource ButtonsMainPageStyle}" >
@@ -65,11 +74,10 @@
                     <Button Style="{StaticResource ButtonsMainPageStyle}">
                         <Image Style="{StaticResource ImagesMainPageStyle}" Source="http://handballcab.com.ar/css/images/logoHandball.png" />
                     </Button>
-                </StackPanel>
-
-            </Grid>
+                </StackPanel>-->
+            <!--</GridView>-->
  
-        </Grid>
+        <!--</GridView>-->
     </Grid>
 
     <Page.BottomAppBar>

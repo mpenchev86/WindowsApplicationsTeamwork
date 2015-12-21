@@ -18,6 +18,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml.Controls.Maps;
+using BeastApplication.ViewModels;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -73,6 +74,11 @@ namespace BeastApplication.Pages
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            if (e.Parameter != null)
+            {
+                UserSelection.SportType = "for " + e.Parameter.ToString();
+            }
+            this.sportType.Text = UserSelection.SportType;
         }
     }
 }

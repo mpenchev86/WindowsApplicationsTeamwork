@@ -16,14 +16,18 @@
         </Grid.RowDefinitions>
 
         <Grid Name="gridTitle"
-              Background="Blue"
+              Background="CadetBlue"
               Grid.Row="0">
             <StackPanel>
                 <TextBlock Text="Events"
-                       Style="{StaticResource TitleStyle}" />
+                           Style="{StaticResource TitleStyle}"
+                           Foreground="AliceBlue"/>
                 <TextBlock Name="datePicked"
-                       HorizontalAlignment="Center"
-                           FontSize="24"/>
+                           Text="{Binding DatePicked}"
+                           HorizontalAlignment="Center"
+                           FontSize="24"
+                           Foreground="AliceBlue"
+                           />
             </StackPanel>
         </Grid>
 
