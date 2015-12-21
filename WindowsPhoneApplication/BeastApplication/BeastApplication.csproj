@@ -103,6 +103,7 @@
       <DependentUpon>NavigationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Helpers\BoolToColorValueConverter.cs" />
     <Compile Include="Helpers\DelegateCommand.cs" />
     <Compile Include="Pages\CalendarPage.xaml.cs">
       <DependentUpon>CalendarPage.xaml</DependentUpon>

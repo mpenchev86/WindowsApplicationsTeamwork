@@ -41,8 +41,10 @@ namespace BeastApplication.Pages
         private async void OnChangeProgressStateButtonClick(object sender, RoutedEventArgs e)
         {
             this.TheProgressRing.IsActive = true;
-            await Task.Delay(5000);
+            await Task.Delay(1000);
             this.TheProgressRing.IsActive = false;
+            (Window.Current.Content as Frame)
+                  .Navigate(typeof(ListEventsPage));
         }
     }
 }
