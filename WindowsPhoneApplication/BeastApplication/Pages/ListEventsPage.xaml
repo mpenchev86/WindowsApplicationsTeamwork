@@ -33,25 +33,21 @@
                            />
             </StackPanel>
 
-            <StackPanel Name="panelAdd" Grid.Row="1" >
-                <!--<TextBlock HorizontalAlignment="Center" Width="250" FontSize="20" Text="Insert time in format" />-->
-                <TextBox HorizontalAlignment="Left" 
+        <StackPanel Name="panelAdd" Grid.Row="1" >
+            <TextBox HorizontalAlignment="Left" 
                          Width="250" 
                          PlaceholderText="Hour:Minutes AM/PM" 
                          Text="{Binding NewSportEvent.PlayAt, Mode=TwoWay}"/>
-
-                <!--<TextBlock HorizontalAlignment="Center" Width="250" FontSize="20"  Text="Insert sport event duratuion" />-->
+               
                 <TextBox HorizontalAlignment="Left" 
                          Width="250" 
                          PlaceholderText="Duration" 
                          Text="{Binding NewSportEvent.Duration, Mode=TwoWay}"/>
-
-                <!--<TextBlock HorizontalAlignment="Center" Width="250" FontSize="20"  Text="Insert numbers of people" />-->
+               
                 <TextBox HorizontalAlignment="Left" 
                          Width="250" PlaceholderText="Number" 
                          Text="{Binding NewSportEvent.ExpectedPeopleCount, Mode=TwoWay}"/>
-
-                <!--<TextBlock HorizontalAlignment="Center" Width="250" FontSize="20"  Text="Insert your name" />-->
+                
                 <TextBox HorizontalAlignment="Left" 
                          Width="250" 
                          PlaceholderText="Your name" 
@@ -100,16 +96,11 @@
                                         Background="{Binding IsJoined, Converter={StaticResource valueConverter}}" 
                                         IsEnabled="{Binding IsJoined}"
                                         Command="{Binding Join}"/>
-                            <!--<Button Content="Join" Width="100" Background="Green" Click="OnJoinEventButtonClick" />-->
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <!--<Button Background="Green"  
-                        HorizontalAlignment="Center" 
-                        Width="300"
-                        Click="OnCreateEventButtonClick">Create Event</Button>-->
-            </ScrollViewer>
+        </ScrollViewer>
  
     </Grid>
         

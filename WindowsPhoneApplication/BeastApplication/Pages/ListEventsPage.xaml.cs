@@ -16,8 +16,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace BeastApplication.Pages
 {
     public sealed partial class ListEventsPage : Page
@@ -39,11 +37,6 @@ namespace BeastApplication.Pages
                     Title = "Back",
                     DestinationPageType = typeof(CalendarPage)
                 },
-                //new AppBarButtonContent()
-                //{
-                //    Title = "Next",
-                //    DestinationPageType = typeof(CreateEventPage)
-                //}
             };
         }
 
@@ -53,7 +46,7 @@ namespace BeastApplication.Pages
                 return this.DataContext as SportEventPageViewModel;
             }
                 
-                set
+            set
             {
                 this.DataContext = value;
             }
@@ -69,20 +62,6 @@ namespace BeastApplication.Pages
             }
             this.datePicked.Text = UserSelection.Date;
         }
-
-
-        //private void OnCreateEventButtonClick(object sender, RoutedEventArgs e)
-        //{
-        //    (Window.Current.Content as Frame)
-        //         .Navigate(typeof(CreateEventPage));
-        //}
-
-
-        //private void OnJoinEventButtonClick(object sender, RoutedEventArgs e)
-        //{
-        //    var dataContext = ((Button)sender).DataContext as SportEventViewModel;
-        //    dataContext.ActualPeopleCount += 1;
-        //}
 
         private async void OnAddEventButtonClick(object sender, RoutedEventArgs e)
         {
