@@ -1,10 +1,14 @@
-﻿namespace BeastApplication.ViewModels
-{
-    using BeastApplication.Helpers;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Windows.Input;
+﻿using BeastApplication.Helpers;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Input;
 
+namespace BeastApplication.ViewModels
+{
     public class SportEventPageViewModel
     {
         private ObservableCollection<SportEventViewModel> sportEvents;
