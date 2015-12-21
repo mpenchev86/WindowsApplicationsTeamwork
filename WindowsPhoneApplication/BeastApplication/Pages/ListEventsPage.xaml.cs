@@ -71,7 +71,7 @@ namespace BeastApplication.Pages
         }
 
         private void OnButtonJoinClick(object sender, RoutedEventArgs e)
-        {
+        {          
             var dataContext = ((Button) sender).DataContext as SportEventViewModel;
             dataContext.ActualPeopleCount += 1;
         }
