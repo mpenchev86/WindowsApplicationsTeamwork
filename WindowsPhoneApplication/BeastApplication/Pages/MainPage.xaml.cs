@@ -32,39 +32,56 @@
                 }
             };
 
-            this.sportViewGrid.SportItems = new[]
+            this.sportViewGrid1.SportItems = new[]
             {
                 new SportButtonContent()
                 {
                     SportType = new SportTypeViewModel()
                     {
+                        StackRow = 0,
+                        StackCol = 0,
                         Name = "Football",
                         ImagePath = "http://weknowyourdreams.com/images/football/football-06.jpg"
                     },
                     DestinationPageType = typeof(LocationsPage)
-                },
+                }
+            };
+            this.sportViewGrid2.SportItems = new[]
+            {
                 new SportButtonContent()
                 {
                     SportType = new SportTypeViewModel()
                     {
+                        StackRow = 0,
+                        StackCol = 1,
                         Name = "Basketball",
                         ImagePath = "http://www.jumpstartsports.com/upload/images/Radnor_Basketball/448650-basketball__mario_sports_mix_.png"
                     },
                     DestinationPageType = typeof(LocationsPage)
-                },
+                }
+            };
+            this.sportViewGrid3.SportItems = new[]
+            {
                 new SportButtonContent()
                 {
                     SportType = new SportTypeViewModel()
                     {
+                        StackRow = 1,
+                        StackCol = 0,
                         Name = "Volleyball",
                         ImagePath = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ3CraG3oZonu4PKjedU-PbSy9WQefot0hNa0B2rGxOkTZatYNU"
                     },
                     DestinationPageType = typeof(LocationsPage)
-                },
+                }
+            };
+            this.sportViewGrid4.SportItems = new[]
+            {
                 new SportButtonContent()
                 {
                     SportType = new SportTypeViewModel()
                     {
+                        StackRow = 1,
+                        StackCol = 1,
                         Name = "Handball",
                         ImagePath = "http://handballcab.com.ar/css/images/logoHandball.png"
                     },
@@ -72,12 +89,7 @@
                 }
             };
         }
-
-        public double WindowWidth
-        {
-            get { return (this.Frame.Width) / 2; }
-        }
-
+       
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(LocationsPage));

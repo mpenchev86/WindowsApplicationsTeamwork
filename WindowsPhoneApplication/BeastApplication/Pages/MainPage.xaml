@@ -14,70 +14,30 @@
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
 
-        <Grid Name="gridTitle"
+        <StackPanel Name="gridTitle"
               Background="CadetBlue"
               Grid.Row="0">
             <TextBlock Text="Select sport"
                        Style="{StaticResource TitleStyle}"
-                       Foreground="AliceBlue"
-                       />
+                       Foreground="AliceBlue"/>
+        </StackPanel>
 
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <controls:SportButtonView x:Name="sportViewGrid1" Grid.Row="0" Grid.Column="0"/>
+            <controls:SportButtonView x:Name="sportViewGrid2" Grid.Row="0" Grid.Column="1"/>
+            <controls:SportButtonView x:Name="sportViewGrid3" Grid.Row="1" Grid.Column="0"/>
+            <controls:SportButtonView x:Name="sportViewGrid4" Grid.Row="1" Grid.Column="1"/>
         </Grid>
 
-        <!--<GridView Name="gridSelect"
-                  Grid.Row="1"
-                  FlowDirection="LeftToRight"
-                  Grid.ColumnSpan="300">
-            <GridView.Items>-->
-        
-                <controls:SportButtonView x:Name="sportViewGrid"
-                                          Grid.Row="1"/>
-            <!--</GridView.Items>-->
-            <!--<GridView>-->
-                <!--<Grid.RowDefinitions>
-                    <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
-                </Grid.RowDefinitions>
-                
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
-                </Grid.ColumnDefinitions>-->
-
-                <!--<StackPanel Grid.Row="0" Grid.Column= "0" >
-                    <TextBlock Text="Football" FontSize="30"
-                               HorizontalAlignment="Center"/>
-                    <Button Style="{StaticResource ButtonsMainPageStyle}" >
-                        <Image Style="{StaticResource ImagesMainPageStyle}" Source="http://weknowyourdreams.com/images/football/football-06.jpg" />
-                    </Button>
-                </StackPanel>
-
-                <StackPanel Grid.Row="0" Grid.Column= "1">
-                    <TextBlock Text="Basketball" FontSize="30"
-                               HorizontalAlignment="Center"/>
-                    <Button Style="{StaticResource ButtonsMainPageStyle}" >
-                        <Image Style="{StaticResource ImagesMainPageStyle}" Source="http://www.jumpstartsports.com/upload/images/Radnor_Basketball/448650-basketball__mario_sports_mix_.png" />
-                    </Button>
-                </StackPanel>
-
-                <StackPanel Grid.Row="1" Grid.Column= "0">
-                    <TextBlock Text="Volleyball" FontSize="30"
-                               HorizontalAlignment="Center"/>
-                    <Button Style="{StaticResource ButtonsMainPageStyle}">
-                        <Image Style="{StaticResource ImagesMainPageStyle}" Source="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ3CraG3oZonu4PKjedU-PbSy9WQefot0hNa0B2rGxOkTZatYNU" />
-                    </Button>
-                </StackPanel>
-                
-                <StackPanel Grid.Row="1" Grid.Column= "1">
-                    <TextBlock Text="Handball" FontSize="30"
-                               HorizontalAlignment="Center"/>
-                    <Button Style="{StaticResource ButtonsMainPageStyle}">
-                        <Image Style="{StaticResource ImagesMainPageStyle}" Source="http://handballcab.com.ar/css/images/logoHandball.png" />
-                    </Button>
-                </StackPanel>-->
-            <!--</GridView>-->
- 
-        <!--</GridView>-->
     </Grid>
 
     <Page.BottomAppBar>
