@@ -1,14 +1,9 @@
-﻿using BeastApplication.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-
-namespace BeastApplication.ViewModels
+﻿namespace BeastApplication.ViewModels
 {
+    using BeastApplication.Helpers;
+    using System.Collections.ObjectModel;
+    using System.Windows.Input;
+
     public class SportEventViewModel : ViewModelBase
     {
         private ObservableCollection<PlayersViewModel> players;

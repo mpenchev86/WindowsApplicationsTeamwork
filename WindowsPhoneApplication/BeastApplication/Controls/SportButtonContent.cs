@@ -1,12 +1,8 @@
-﻿using BeastApplication.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BeastApplication.Controls
+﻿namespace BeastApplication.Controls
 {
+    using BeastApplication.ViewModels;
+    using System;
+
     public class SportButtonContent
     {
         public SportTypeViewModel SportType { get; set; }
