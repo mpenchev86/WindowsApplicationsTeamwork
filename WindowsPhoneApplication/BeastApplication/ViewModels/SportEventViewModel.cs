@@ -50,7 +50,7 @@ namespace BeastApplication.ViewModels
         {
             get
             {
-                return this.isJoined;
+                return !this.isJoined;
             }
             set
             {

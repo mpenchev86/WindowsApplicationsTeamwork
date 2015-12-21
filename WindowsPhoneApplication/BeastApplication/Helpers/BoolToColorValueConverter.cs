@@ -21,10 +21,10 @@ namespace BeastApplication.Helpers
             var isOk = (bool)value;
             if (!isOk)
             {
-                return new SolidColorBrush(Colors.Green);
+                return new SolidColorBrush(Colors.Purple);
             }
 
-            return new SolidColorBrush(Colors.Purple);
+            return new SolidColorBrush(Colors.Green);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)

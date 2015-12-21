@@ -58,7 +58,10 @@
                                     <TextBlock Text="{Binding CreatorName}" />
                                 </StackPanel>
 
-                                <Button Content="Join" Width="100" Background="{Binding IsJoined, Converter={StaticResource valueConverter}}" Command="{Binding Join}"/>
+                                <Button Content="Join" Width="100"
+                                        Background="{Binding IsJoined, Converter={StaticResource valueConverter}}" 
+                                        IsEnabled="{Binding IsJoined}"
+                                        Command="{Binding Join}"/>
                                 <!--<Button Content="Join" Width="100" Background="Green" Click="OnButtonJoinClick" />-->
                             </StackPanel>
                         </DataTemplate>
