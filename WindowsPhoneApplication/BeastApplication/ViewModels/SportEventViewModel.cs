@@ -15,6 +15,7 @@ namespace BeastApplication.ViewModels
         private ICommand joinCommand;
         private int actualPeopleCount;
         private bool isJoined;
+        private string playAt;
 
         public SportEventViewModel()
             : this(string.Empty, 0, 0, string.Empty)

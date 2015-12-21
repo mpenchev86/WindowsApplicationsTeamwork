@@ -28,23 +28,23 @@ namespace BeastApplication.Pages
         {
             this.InitializeComponent();
 
-            this.navigationView.NavItems = new[]
-            {
-                new AppBarButtonContent()
-                {
-                    Title = "Back",
-                    DestinationPageType = typeof(ListEventsPage)
-                }
-            };
+            //this.navigationView.NavItems = new[]
+            //{
+            //    new AppBarButtonContent()
+            //    {
+            //        Title = "Back",
+            //        DestinationPageType = typeof(ListEventsPage)
+            //    }
+            //};
         }
 
-        private async void OnChangeProgressStateButtonClick(object sender, RoutedEventArgs e)
-        {
-            this.TheProgressRing.IsActive = true;
-            await Task.Delay(1000);
-            this.TheProgressRing.IsActive = false;
-            (Window.Current.Content as Frame)
-                  .Navigate(typeof(ListEventsPage));
-        }
+        //private async void OnChangeProgressStateButtonClick(object sender, RoutedEventArgs e)
+        //{
+        //    this.TheProgressRing.IsActive = true;
+        //    await Task.Delay(1000);
+        //    this.TheProgressRing.IsActive = false;
+        //    (Window.Current.Content as Frame)
+        //          .Navigate(typeof(ListEventsPage));
+        //}
     }
 }

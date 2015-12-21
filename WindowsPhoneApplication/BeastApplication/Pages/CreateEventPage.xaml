@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.RowDefinitions>
+        <!--<Grid.RowDefinitions>
             <RowDefinition Height="60" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
@@ -24,19 +24,23 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <StackPanel>
+            <StackPanel >
                 <Line Height="20" />
                 <TextBlock HorizontalAlignment="Center" Width="250" FontSize="20" Text="Insert time in format" />
-                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Hour:Minutes AM/PM" Text="{Binding}"/>
+                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Hour:Minutes AM/PM" 
+                         Text="{Binding NewSportEvent.PlayAt, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <Line Height="20" />
                 <TextBlock HorizontalAlignment="Center" Width="250" FontSize="20"  Text="Insert sport event duratuion" />
-                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Duration" Text="{Binding}"/>
+                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Duration" 
+                         Text="{Binding NewSportEvent.Duration, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <Line Height="20" />
                 <TextBlock HorizontalAlignment="Center" Width="250" FontSize="20"  Text="Insert numbers of people" />
-                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Number" Text="{Binding}"/>
+                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Number" 
+                         Text="{Binding NewSportEvent.ExpectedPeopleCount, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <Line Height="20" />
                 <TextBlock HorizontalAlignment="Center" Width="250" FontSize="20"  Text="Insert your name" />
-                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Your name" Text="{Binding}"/>
+                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Your name" 
+                         Text="{Binding NewSportEvent.CreatorName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <Line Height="20" />
                 <Button Background="Green" HorizontalAlignment="Center" Width="250" 
                         Command="{Binding Save}" 
@@ -51,5 +55,6 @@
         <AppBar>
             <controls:NavigationView x:Name="navigationView"/>
         </AppBar>
-    </Page.BottomAppBar>
+    </Page.BottomAppBar>-->
+    </Grid>
 </Page>

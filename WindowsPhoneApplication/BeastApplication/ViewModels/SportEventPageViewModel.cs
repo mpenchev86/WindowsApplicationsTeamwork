@@ -14,6 +14,11 @@ namespace BeastApplication.ViewModels
         private ObservableCollection<SportEventViewModel> sportEvents;
         private ICommand saveCommand;
 
+        public SportEventPageViewModel()
+        {
+            this.NewSportEvent = new SportEventViewModel();
+        }
+
         public IEnumerable<SportEventViewModel> SportEvents
         {
             get
@@ -41,6 +46,8 @@ namespace BeastApplication.ViewModels
             }
         }
 
+        public SportEventViewModel NewSportEvent { get; set; }
+
         public ICommand Save
         {
             get
@@ -56,7 +63,7 @@ namespace BeastApplication.ViewModels
 
         private void HandleSaveCommand()
         {
-            
+            this.sportEvents.Add(new SportEventViewModel(this.NewSportEvent.PlayAt, this.NewSportEvent.Duration, this.NewSportEvent.ExpectedPeopleCount, this.NewSportEvent.CreatorName));
         }
     }
 }

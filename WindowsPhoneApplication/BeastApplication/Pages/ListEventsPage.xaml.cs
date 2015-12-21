@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -38,11 +39,11 @@ namespace BeastApplication.Pages
                     Title = "Back",
                     DestinationPageType = typeof(CalendarPage)
                 },
-                new AppBarButtonContent()
-                {
-                    Title = "Next",
-                    DestinationPageType = typeof(CreateEventPage)
-                }
+                //new AppBarButtonContent()
+                //{
+                //    Title = "Next",
+                //    DestinationPageType = typeof(CreateEventPage)
+                //}
             };
         }
 
@@ -69,16 +70,25 @@ namespace BeastApplication.Pages
             this.datePicked.Text = UserSelection.Date;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            (Window.Current.Content as Frame)
-                 .Navigate(typeof(CreateEventPage));
-        }
 
-        //private void OnButtonJoinClick(object sender, RoutedEventArgs e)
-        //{          
-        //    var dataContext = ((Button) sender).DataContext as SportEventViewModel;
+        //private void OnCreateEventButtonClick(object sender, RoutedEventArgs e)
+        //{
+        //    (Window.Current.Content as Frame)
+        //         .Navigate(typeof(CreateEventPage));
+        //}
+
+
+        //private void OnJoinEventButtonClick(object sender, RoutedEventArgs e)
+        //{
+        //    var dataContext = ((Button)sender).DataContext as SportEventViewModel;
         //    dataContext.ActualPeopleCount += 1;
         //}
+
+        private async void OnAddEventButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.TheProgressRing.IsActive = true;
+            await Task.Delay(1000);
+            this.TheProgressRing.IsActive = false;
+        }
     }
 }
