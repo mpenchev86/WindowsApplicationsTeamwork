@@ -10,7 +10,7 @@ namespace BeastApplication.Controls
     public class SportButtonContent
     {
         public SportTypeViewModel SportType { get; set; }
-        public Type DestinationPageType { get; set; }
 
+        public Type DestinationPageType { get; set; }
     }
 }

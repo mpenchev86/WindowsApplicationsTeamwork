@@ -41,7 +41,7 @@ namespace BeastApplication.Controls
         // Using a DependencyProperty as the backing store for NavItems.  This enables animation, styling, binding, etc...
         private static readonly DependencyProperty sportItemsProperty =
             DependencyProperty.Register(
-                "NavItems",
+                "SportItems",
                 typeof(IEnumerable<SportButtonContent>),
                 typeof(SportButtonView),
                 new PropertyMetadata(null, new PropertyChangedCallback(HandleSportItemsChanged)));

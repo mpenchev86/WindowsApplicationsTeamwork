@@ -18,7 +18,7 @@
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Width="150">
+                    <StackPanel>
                         <TextBlock Text="{Binding SportType.Name}" 
                                    FontSize="30"
                                    HorizontalAlignment="Center"/>
