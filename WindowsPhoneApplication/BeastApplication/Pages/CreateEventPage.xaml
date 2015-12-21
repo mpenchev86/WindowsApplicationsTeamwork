@@ -27,16 +27,16 @@
             <StackPanel>
                 <Line Height="20" />
                 <TextBlock HorizontalAlignment="Center" Width="250" FontSize="20" Text="Insert time in format" />
-                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Hour:Minutes AM/PM" />
+                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Hour:Minutes AM/PM" Text="{Binding}"/>
                 <Line Height="20" />
                 <TextBlock HorizontalAlignment="Center" Width="250" FontSize="20"  Text="Insert sport event duratuion" />
-                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Duration"/>
+                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Duration" Text="{Binding}"/>
                 <Line Height="20" />
                 <TextBlock HorizontalAlignment="Center" Width="250" FontSize="20"  Text="Insert numbers of people" />
-                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Number" />
+                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Number" Text="{Binding}"/>
                 <Line Height="20" />
                 <TextBlock HorizontalAlignment="Center" Width="250" FontSize="20"  Text="Insert your name" />
-                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Your name" />
+                <TextBox HorizontalAlignment="Center" Width="250" PlaceholderText="Your name" Text="{Binding}"/>
                 <Line Height="20" />
                 <Button Background="Green" HorizontalAlignment="Center" Width="250" 
                         Command="{Binding Save}" 

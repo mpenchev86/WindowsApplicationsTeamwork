@@ -14,6 +14,7 @@ namespace BeastApplication.ViewModels
         private ObservableCollection<PlayersViewModel> players;
         private ICommand joinCommand;
         private int actualPeopleCount;
+        private bool isJoined;
 
         public SportEventViewModel()
             : this(string.Empty, 0, 0, string.Empty)
@@ -32,7 +33,7 @@ namespace BeastApplication.ViewModels
             this.NewPlayer = new PlayersViewModel();
         }
 
-        public int ActualPeopleCount //{ get; set; }
+        public int ActualPeopleCount
         {
             get
             {
@@ -45,6 +46,18 @@ namespace BeastApplication.ViewModels
             }
         }
 
+        public bool IsJoined
+        {
+            get
+            {
+                return this.isJoined;
+            }
+            set
+            {
+                this.isJoined = value;
+                this.RaisePropertyChange("IsJoined");
+            }
+        }
         public string PlayAt { get; set; }
 
         public int Duration { get; set; }
@@ -72,6 +85,7 @@ namespace BeastApplication.ViewModels
         {
             this.players.Add(new PlayersViewModel(this.NewPlayer.Name));
             this.ActualPeopleCount = this.players.Count;
+            this.IsJoined = true;
         }
     }
 }

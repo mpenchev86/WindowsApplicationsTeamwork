@@ -75,10 +75,10 @@ namespace BeastApplication.Pages
                  .Navigate(typeof(CreateEventPage));
         }
 
-        private void OnButtonJoinClick(object sender, RoutedEventArgs e)
-        {          
-            var dataContext = ((Button) sender).DataContext as SportEventViewModel;
-            dataContext.ActualPeopleCount += 1;
-        }
+        //private void OnButtonJoinClick(object sender, RoutedEventArgs e)
+        //{          
+        //    var dataContext = ((Button) sender).DataContext as SportEventViewModel;
+        //    dataContext.ActualPeopleCount += 1;
+        //}
     }
 }

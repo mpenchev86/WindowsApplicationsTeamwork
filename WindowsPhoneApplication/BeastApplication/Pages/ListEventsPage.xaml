@@ -6,7 +6,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:BeastApplication.Controls"
+    xmlns:helpers="using:BeastApplication.Helpers"
     mc:Ignorable="d">
+
+    <Page.Resources>
+        <helpers:BoolToColorValueConverter x:Key="valueConverter" />
+    </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -57,8 +62,8 @@
                                     <TextBlock Text="{Binding CreatorName}" />
                                 </StackPanel>
 
-                                <!--<Button Content="Join" Width="100" Background="Green" Command="{Binding Join}"/>-->
-                                <Button Content="Join" Width="100" Background="Green" Click="OnButtonJoinClick" />
+                                <Button Content="Join" Width="100" Background="{Binding IsJoined, Converter={StaticResource valueConverter}}" Command="{Binding Join}"/>
+                                <!--<Button Content="Join" Width="100" Background="Green" Click="OnButtonJoinClick" />-->
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>

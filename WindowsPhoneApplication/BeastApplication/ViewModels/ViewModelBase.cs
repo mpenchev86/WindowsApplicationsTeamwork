@@ -13,7 +13,7 @@
 
         protected void RaisePropertyChange(string propertyName)
         {
-            if (this.PropertyChanged != null)
+            if (this.PropertyChanged == null)
             {
                 return;
             }
